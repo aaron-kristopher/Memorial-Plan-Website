@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:whgt@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --primary-light: #70CAD1;
+  --primary-dark: #15616D;
+  --secondary-dark: #001524;
+  --black: #111827;
+  --black-lighter: #202427;
+  --white-emphasis: rgb(217, 217, 217);
+  --white: #e1e1e1;
+  --accent: #FF7D00;
+
+
+  --primary-btn-200: #99f6e4;
+  --primary-btn-600: #0d9488;
+  --primary-btn-700: #0f766e;
+  --primary-btn-900: #134e4e;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth
+  }
+}
+
+body {
+  @apply 
+    font-[Poppins] bg-[var(--black)]
+}
+
+li {
+  @apply p-4 text-sm
+}
+
+.button-primary {
+  @apply
+    bg-yellow-500/80 hover:bg-yellow-500/90
+    px-6 py-2 rounded-md
+    text-white font-medium
+    tracking-wider transition
+}
+
+.btn {
+  @apply px-4 py-2 border bg-gradient-to-br 
+  from-[var(--secondary-dark)] to-[var(--primary-dark)]
+  rounded-md text-white
+}
+
+.card {
+  @apply
+    bg-white text-white
+    w-80 min-h-[10rem]
+    shadow-lg rounded-lg overflow-hidden
+}
+
+.product-title {
+  @apply
+    font-extrabold text-2xl
+    overflow-ellipsis overflow-hidden whitespace-nowrap
+}
+
+.downpayment-percent {
+  @apply
+    bg-[var(--primary-dark)]
+    px-1.5 py-0.5 rounded-md
+    text-sm text-white
+}
